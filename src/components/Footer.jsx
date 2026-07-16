@@ -175,9 +175,7 @@ const Footer = () => {
           . All Rights Reserved.
         </p>
 
-        <p className="mt-3 md:mt-0 text-gray-500">
-          Designed with ❤️ for Luxury Beauty
-        </p>
+       
 
       </div>
 
