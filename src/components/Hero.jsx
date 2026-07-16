@@ -1,8 +1,10 @@
 import React from "react";
 import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
 import assets from "../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section
       className="relative h-[90vh] bg-cover bg-center bg-no-repeat flex items-center"
@@ -17,7 +19,7 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-6 w-full">
         <div className="max-w-2xl">
 
-          <span className="inline-block bg-yellow-500 text-black px-5 py-2 rounded-full font-semibold text-sm tracking-wide uppercase kameron">
+          <span className="inline-block bg-yellow-500 text-black px-5 py-2 rounded-full font-semibold text-sm tracking-wide uppercase">
             House Calls Only
           </span>
 
@@ -35,15 +37,12 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-5 mt-10">
 
-            <button className="flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition duration-300">
+            <button onClick={() => navigate("/contact")} className="flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition duration-300">
               Book Appointment
               <FaArrowRight />
             </button>
 
-            <button className="flex items-center gap-3 border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black px-8 py-4 rounded-full font-semibold transition duration-300">
-              <FaWhatsapp />
-              WhatsApp Us
-            </button>
+    
 
           </div>
 
